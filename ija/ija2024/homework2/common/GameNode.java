@@ -98,6 +98,7 @@ public class GameNode {
     public boolean light() {
         return true;
     }
+    
 
     public String toString() {
         return "ano";
