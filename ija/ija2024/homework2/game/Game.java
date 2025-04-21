@@ -7,11 +7,14 @@
  import ija.ija2024.homework2.common.GameNode;
  import ija.ija2024.homework2.common.Position;
  import ija.ija2024.homework2.common.Side;
+
+import ija.ija2024.tool.common.ToolEnvironment;
+import ija.ija2024.tool.common.ToolField;
  
  /**
   * Třída reprezentující prostředí hry s mřížkou políček.
   */
- public class Game {
+ public class Game implements ToolEnvironment  {
      public  int rows;
      public  int cols;
      private GameNode[][] board;
@@ -81,9 +84,16 @@
          return  gn;
      }
  
-     public int rows(){return this.rows;}
- 
-     public int cols(){ return this.cols;}
+    @Override
+    public int rows(){return this.rows;}
+
+    @Override
+    public int cols(){ return this.cols;}
+
+    @Override
+    public ToolField fieldAt(int row, int col) {
+        return this.board[row - 1][col - 1]; // Pozor: 1-based indexování
+    }
  
      public GameNode node(Position p){
          return this.board[p.getRow()][p.getCol()];
