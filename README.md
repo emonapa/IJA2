@@ -13,7 +13,7 @@ The project was completed during the **2024/2025 academic year, summer semester*
 
 
 ## Authors
-- **Name:** *[Václav Matyáš]*, *[Tomáš Šuda]*
+- **Name:** *Václav Matyáš*, *Tomáš Šuda*
 
 ## Points
 - **70 points** (maximum)
